@@ -15,8 +15,13 @@ function config ($stateProvider,$locationProvider){
          .state('album', {
              url: '/album',
              templateUrl: '/templates/album.html'
-         });
+         })
 
+        $stateProvider
+    .state('collection',{
+        url:'/collection',
+        templateUrl:'.templates/collection.html'
+    });
     
 }
   angular
