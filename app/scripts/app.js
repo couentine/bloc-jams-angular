@@ -15,6 +15,7 @@ function config ($stateProvider,$locationProvider){
     })
          .state('album', {
              url: '/album',
+        controller: 'AlbumCtr asAlbum',
              templateUrl: '/templates/album.html'
          })
 
