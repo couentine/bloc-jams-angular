@@ -1,6 +1,15 @@
 (function() {
      function seekBar($document) {
 
+       var calculatePercent = function(seekBar, event) {
+                 var offsetX = event.pageX - seekBar.offset().left;
+                 var seekBarWidth = seekBar.width();
+                 var offsetXPercent = offsetX / seekBarWidth;
+                 offsetXPercent = Math.max(0, offsetXPercent);
+                 offsetXPercent = Math.min(1, offsetXPercent);
+                 return offsetXPercent;
+        };
+
      return {
          templateUrl: '/templates/directives/seek_bar.html',
          replace: true,
@@ -23,6 +32,9 @@
              scope.fillStyle = function() {
                  return {width: percentString()};
              };
+             scope.thumbStyle = function(){
+               return {left: percentString()};
+             };
 
              scope.onClickSeekBar = function(event) {
              var percent = calculatePercent(seekBar, event);
@@ -38,8 +50,8 @@
          });
 
             $document.bind('mouseup.thumb', function() {
-            $document.unbind('mousemove.thumb');
-            $document.unbind('mouseup.thumb');
+                $document.unbind('mousemove.thumb');
+                $document.unbind('mouseup.thumb');
         });
       };
     }
