@@ -11,7 +11,7 @@
       } else {
 
       //var wholeSeconds = Math.floor(seconds);
-      //var minutes = Math.floor(wholeSeconds / 60);
+      //var minutes = Math.floor(wholeSeconds / 60); 
       //var remainingSeconds = wholeSeconds % 60;
       //var output = minutes + ':';
       //if (remainingSeconds < 10) {

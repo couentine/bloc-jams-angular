@@ -45,7 +45,7 @@ function Fixtures() {
         //albums.push(albumPicasso);
         }
               // return albums;
-        return collection;
+        return collection; 
         };
 
         return Fixtures;
